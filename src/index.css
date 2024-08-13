@@ -116,3 +116,56 @@ canvas{
   font-size: 1em;
 }
 
+.details-conatiner{
+  width: 30%;
+  height: fit-content;
+  padding: 2vh 2vw;
+  position: absolute;
+  bottom: 0%;
+  right: 2%;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.part-tittle{
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.part-details{
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 600px){
+  .details-conatiner{
+    width: 100%;
+    padding: 0 0.5em;
+    bottom: 1%;
+    right: 0%;
+  }
+  .part-details{
+    font-size: 0.8rem;
+  }
+  #part{
+    width: 80%;
+  }
+  
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px){
+  .details-conatiner{
+    width: 100%;
+    padding: 0 1em;
+    bottom: 2%;
+  }
+  .part-tittle{
+    font-size: 3rem;
+  }
+  .part-details{
+    font-size: 1.4rem;
+  }
+}

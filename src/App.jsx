@@ -4,6 +4,7 @@ import { useGLTF, Environment, OrbitControls } from "@react-three/drei";
 import gsap from 'gsap';
 import * as THREE from 'three';
 import Loader from './loader';
+import Details from './AircraftDetails';
 
 
 function B2({ isWireframe, isColor }) {
@@ -483,7 +484,7 @@ const AnimatedCamera = ({ targetPosition }) => {
       ease: 'power2.inOut',
       onUpdate: () => {
         camera.updateProjectionMatrix(); // Update the projection matrix
-        gl.render(gl.scene, camera); // Re-render the scene
+        gl.render(gl.scene, camera);
       },
     });
   }, [targetPosition, camera, gl]);
@@ -558,6 +559,7 @@ function App() {
         />
       </Canvas>
       <AircraftPartDetails onSelectPart={setPosition} onToggleWireframe={setIsWireframe} onColorPart={setIsColor} />
+      <Details isColor={isColor} />
     </>
   );
 }
